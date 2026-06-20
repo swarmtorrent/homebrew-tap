@@ -4,24 +4,24 @@ cask "swarm" do
 
   url "https://swarmtorrent.com/downloads/Swarm-#{version}.dmg"
   name "Swarm"
-  desc "Native macOS BitTorrent client with live charts, streaming, and proxy privacy"
+  desc "Native BitTorrent client with live charts, streaming, and proxy privacy"
   homepage "https://swarmtorrent.com/"
-
-  auto_updates true
-  depends_on macos: ">= :sonoma"
 
   livecheck do
     url "https://swarmtorrent.com/appcast.xml"
     strategy :sparkle
   end
 
+  auto_updates true
+  depends_on macos: :sonoma
+
   app "Swarm.app"
 
   zap trash: [
     "~/Library/Application Support/Swarm",
-    "~/Library/Preferences/com.clearchaos.swarm.plist",
     "~/Library/Caches/com.clearchaos.swarm",
-    "~/Library/HTTPStorages/com.clearchaos.swarm",
     "~/Library/Containers/com.clearchaos.swarm",
+    "~/Library/HTTPStorages/com.clearchaos.swarm",
+    "~/Library/Preferences/com.clearchaos.swarm.plist",
   ]
 end
