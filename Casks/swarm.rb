@@ -1,6 +1,6 @@
 cask "swarm" do
-  version "0.9"
-  sha256 "c4be67f793749389ef46cf7fbad3ddf403717f2c3e6a5938219ae358520e67b1"
+  version "0.9.1"
+  sha256 "820eb70335d74d2b0c3869a95427210d5c8271be25a82277c04d2705cfade1f0"
 
   url "https://swarmtorrent.com/downloads/Swarm-#{version}.dmg"
   name "Swarm"
